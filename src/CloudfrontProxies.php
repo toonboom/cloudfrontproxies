@@ -18,10 +18,9 @@ class CloudfrontProxies
      */
     public function handle($request, Closure $next)
     {
-        if ($request->header('cloudfront-forwarded-proto')) {
-            $this->loadTrustedProxies($request);
-            $this->setCloudfrontHeaders($request);
-        }
+        $this->loadTrustedProxies($request);
+        $this->setCloudfrontHeaders($request);
+
         return $next($request);
     }
 
