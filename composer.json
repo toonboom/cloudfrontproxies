@@ -1,46 +1,58 @@
 {
     "name": "toonboom/cloudfrontproxies",
     "description": "Sets proxy settings for Cloudfront in a Laravel project",
-    "keywords": [
+    "keywords":
+    [
         "cloudfront",
         "laravel",
         "trusted proxies"
     ],
     "license": "MIT",
-    "authors": [
+    "authors":
+    [
         {
             "name": "J David Baker",
             "email": "me@jdavidbaker.com",
             "homepage": "http://www.jdavidbaker.com",
             "role": "Developer"
-        },{
+        },
+        {
             "name": "Jerome Harfouche",
             "email": "jharfouche@toonboom.com",
             "role": "Developer"
-        },
+        }
     ],
-    "require": {
+    "require":
+    {
+        "php": "^7.3.0|^8.0|^8.1",
         "illuminate/support": "8.*|^9.0|^10.0",
         "guzzlehttp/guzzle": "^6.3|^7.0"
     },
-    "require-dev": {
+    "require-dev":
+    {
         "mockery/mockery": "~1.0",
         "phpunit/phpunit": "~8.0|^9.0",
-        "orchestra/testbench": "~6.0|^7.0"
+        "orchestra/testbench": "^6.0|^8.0"
     },
-    "autoload": {
-        "psr-4": {
+    "autoload":
+    {
+        "psr-4":
+        {
             "jdavidbakr\\CloudfrontProxies\\": "src"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
+    "extra":
+    {
+        "laravel":
+        {
+            "providers":
+            [
                 "jdavidbakr\\CloudfrontProxies\\CloudfrontProxiesServiceProvider"
             ]
         }
     },
-    "scripts": {
+    "scripts":
+    {
         "test": "phpunit"
     },
     "minimum-stability": "dev",
